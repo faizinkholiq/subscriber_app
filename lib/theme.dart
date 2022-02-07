@@ -9,9 +9,14 @@ TextStyle titleTextStyle = GoogleFonts.poppins(
   fontSize: 26,
 );
 
+TextStyle titleProTextStyle = GoogleFonts.poppins(
+  color: Color(0xff007DFF),
+  fontWeight: FontWeight.bold,
+  fontSize: 26,
+);
 
 TextStyle subtitleTextStyle = GoogleFonts.poppins(
-  color: Color(0xff899788),
+  color: whiteColor,
   fontWeight: FontWeight.w300,
   fontSize: 16,
 );
