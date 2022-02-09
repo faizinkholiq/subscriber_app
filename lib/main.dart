@@ -4,7 +4,12 @@ import 'package:uangkuu/theme.dart';
 void main() => runApp(PaymentApps());
 
 
-class PaymentApps extends StatelessWidget {
+class PaymentApps extends StatefulWidget {
+  @override
+  State<PaymentApps> createState() => _PaymentAppsState();
+}
+
+class _PaymentAppsState extends State<PaymentApps> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,7 +17,14 @@ class PaymentApps extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Color(0xff04112F),
         body: SafeArea(
-          child: Header(),
+          child: Column(
+            children: [
+              Header(),
+              Option(),
+              Option(),
+              Option(),
+            ],
+          ),
         )
       )
     );
@@ -52,6 +64,24 @@ class Header extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ]
+      ),
+    );
+  }
+}
+
+class Option extends StatelessWidget {
+  const Option({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Container(
+        padding: EdgeInsets.all(20),
+        margin: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.white),
+          borderRadius: BorderRadius.circular(14)
+        ),
       ),
     );
   }
